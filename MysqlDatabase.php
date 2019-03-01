@@ -19,7 +19,11 @@ class MysqlDatabase {
 
 
 $test = new MysqlDatabase();
+//insertion
 $insert=$test->display("insert into stud values(NULL,'jeffin','jeff@gmail.com',3)");
+//update
+$update=$test->display("update stud set name ='saanni' WHERE id=2");
+//deletion
 //$delete=$test->display("delete from stud where id = 5");
 $students = $test->display("select * from stud");
 while($data = $students->fetch_object()){
